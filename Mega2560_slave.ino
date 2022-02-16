@@ -1,5 +1,6 @@
 #include <Wire.h>
 int fuggStatus = 0;
+int fuggRaw=0;
 int incArray[20];
 byte incByte=0;//_____     _____     ________
 int sor=0;           //r,g,b,l,w,r,g,b,l,w,r ,g ,b, l, w
@@ -12,7 +13,9 @@ void setup(){        //pinMode(pin,OUTPUT) be kell állítani!!!
   Wire.onReceive(receiveEvent);
   Serial.begin(115200);
   for(int n=0;n>20;n++){
-    pinMode(analog
+    pinMode(analogPinArray[n], OUTPUT);
+    pinMode(digitalPinArray[n], OUTPUT);
+    
   }
   
 }
