@@ -14,7 +14,7 @@ void loop(){
   delay(100);
 }
 
-void receiveEvent(){
+void receiveEvent(int howMany){
   Serial.print('\n');
   while(Wire.available()){
     for(sor=0;sor<20;sor++){
