@@ -62,7 +62,7 @@ void loop(){
               cut_String.toCharArray(raw_charArray,100);
               sendNums(raw_charArray);
             }
-            break;
+            break; //a végén legyen vége a parent while loopnak
           } else {currentLine = "";}
         } else if (in_char != '\r') {currentLine += in_char;
         }
@@ -85,7 +85,7 @@ void sendNums(String raw_charArray){
     asd = NUMS.toInt();
     numArray[id] = asd;
     if(raw_charArray.indexOf(',',pos) == -1)
-    break;
+    break;    // ha a végére ér, törjön a while loop
     pos=raw_charArray.indexOf(',',pos)+1;
     id++;
   }
