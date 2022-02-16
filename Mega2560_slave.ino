@@ -11,6 +11,9 @@ void setup(){        //pinMode(pin,OUTPUT) be kell állítani!!!
   Wire.begin(4);
   Wire.onReceive(receiveEvent);
   Serial.begin(115200);
+  for(int n=0;n>20;n++){
+    pinMode(analog
+  }
   
 }
 
@@ -30,6 +33,7 @@ void receiveEvent(int howMany){
       fuggRaw = incArray[14]
       if (incArray[14] != fuggStatus){ //Alapból 0-án, van, nincs call()
         fuggelhuzo(fuggRaw);
+        fuggStatus = incArray[14];
       }
     }
   }
